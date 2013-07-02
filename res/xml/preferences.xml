@@ -1,0 +1,33 @@
+
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:fragment="@string/app_name">
+        <PreferenceCategory android:title="Game Settings">
+            <ListPreference 
+                android:title="Movement Sensitivity"
+                android:key="movementSensitivity"
+                android:defaultValue="1"
+                android:dialogTitle="Sensitivity"
+                android:entries="@array/sensitivityNames"
+                android:entryValues="@array/sensitivityValues"
+                />
+        <CheckBoxPreference android:title="Fancy Boxes" android:summary="Render 3D boxes with linear perspective" android:key="3DRendering"/>
+        <Preference android:dependency="3DRendering" android:title="3D Depth" android:key="3Depth"/>
+        <PreferenceScreen android:title="Set Colors">
+            <Preference android:title="Background Color" android:key="BackgroundColor"></Preference>
+            <Preference android:title="Player Color" android:key="PlayerColor"></Preference>
+            <Preference android:title="Asteroid Color" android:key="AsteroidColor"></Preference>
+            <Preference android:title="Classic Goal Color" android:key="GoalColor"></Preference>
+            <Preference android:key="FlashColor" android:title="Survival Flash Color"/>
+        </PreferenceScreen>
+        </PreferenceCategory>
+		<PreferenceCategory android:title="Help">
+            <Preference android:title="Classic" android:summary="Explain the Classic game mode" android:key="classic"/>
+            <Preference android:title="Survival" android:summary="Explain the Survival game mode." android:key="survival"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Reset Values">
+            <Preference android:title="Colors" android:key="colors"/>
+            <Preference android:title="High Scores" android:key="hiscores"/>
+        </PreferenceCategory>
+
+       
+        
+    </PreferenceScreen>
